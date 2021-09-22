@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="6dp"
+    app:cardUseCompatPadding="true"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/thumbImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/urlTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="https://stackoverflow.com"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/dateTextView"
+            app:layout_constraintLeft_toRightOf="@id/thumbImageView"
+            app:layout_constraintRight_toLeftOf="@id/deleteImageView"
+            app:layout_constraintTop_toTopOf="@id/thumbImageView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/dateTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="12 jun 20210"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="@id/thumbImageView"
+            app:layout_constraintLeft_toRightOf="@id/thumbImageView"
+            app:layout_constraintRight_toLeftOf="@id/deleteImageView"
+            app:layout_constraintTop_toBottomOf="@id/urlTextView" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/deleteImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_delete_24"
+            app:layout_constraintBottom_toBottomOf="@id/thumbImageView"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/thumbImageView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
